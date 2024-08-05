@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Club</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+    <link rel="stylesheet" href="https://adminlte.io/themes/v3/dist/css/adminlte.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/jquery/jquery.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/plugins/select2/js/select2.full.min.js"></script>
+    <script src="https://adminlte.io/themes/v3/dist/js/adminlte.min.js"></script>
+</head>
+<body>
+    <section id="banner">
+        <img src="images/aclogo_preview_rev_1.png" alt="Activity Club Logo" class="logo">
+        <div class="banner-text">
+            <h1>Activity Club</h1>
+            <p>Spice Up Your Life</p>
+            <div class="banner-btn">
+                <a href="#">Find Out</a>
+            </div>
+        </div>
+    </section>
+    <div id="sideNav">
+        <nav>
+            <ul>
+                <li><a href="#banner">HOME</a></li>
+                <li><a href="#login">LOGIN</a></li>
+                
+                <li><a href="#event">EVENT</a></li>
+                <li><a href="#eventDetails">EVENT DETAILS</a></li>
+                <li><a href="#footer">MEET US</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div id="menuBtn">
+        <img src="images/menu22.png" alt="Menu Icon" id="menu">
+    </div>
+    
+    <!-- Login Section -->
+    <section id="login">
+        <div class="title-text">
+            <p>LOGIN</p>
+        </div>
+        <div class="login-box">
+            <div class="login">
+                <h1>Login Details</h1>
+            </div>
+            
+            <form action="#event" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender" class="form-control select2" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group">
+                    <label for="role">Role</label>
+                    <select id="role" name="role" class="form-control select2" required>
+                        <option value="">Select Role</option>
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+        </div>
+    </section>
+
+   
+    <!-- Event Section -->
+    <!-- Event Section -->
+<section id="event">
+    <div class="title-text">
+        <p>Event</p>
+    </div>
+    <div class="event-box">
+        <div class="event">
+            <h1>Choose Event Type</h1>
+        </div>
+
+        <form action="#eventDetails" method="post">
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="party" name="eventType" value="party">
+                    <label for="party">Party</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="sports" name="eventType" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="graduation" name="eventType" value="graduation">
+                    <label for="graduation">Graduation</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="birthday" name="eventType" value="birthday">
+                    <label for="birthday">Birthday</label>
+                </div>
+                <div class="checkbox-item">
+                    <input type="checkbox" id="other" name="eventType" value="other">
+                    <label for="other">Other</label>
+                </div>
+            </div>
+            <div class="event-btn">
+                <button type="submit" class="btn btn-primary">Create Event</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Event Details Section -->
+    <!-- Event Details Section -->
+<section id="eventDetails">
+    <div class="event-details-box">
+        <h1>Event Details</h1>
+        <form action="#submit" method="post">
+            <div class="form-group">
+                <label for="eventName">Name</label>
+                <input type="text" id="eventName" name="eventName" class="form-control" placeholder="Enter event name" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDescription">Description</label>
+                <textarea id="eventDescription" name="eventDescription" class="form-control" placeholder="Enter event description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="eventCategory">Category</label>
+                <input type="text" id="eventCategory" name="eventCategory" class="form-control" placeholder="Enter event category" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDestination">Destination</label>
+                <input type="text" id="eventDestination" name="eventDestination" class="form-control" placeholder="Enter event destination" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDateFrom">Date From</label>
+                <input type="date" id="eventDateFrom" name="eventDateFrom" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="eventDateTo">Date To</label>
+                <input type="date" id="eventDateTo" name="eventDateTo" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="eventCost">Cost</label>
+                <input type="number" id="eventCost" name="eventCost" class="form-control" placeholder="Enter event cost" required>
+            </div>
+            <div class="form-group">
+                <label for="eventStatus">Status</label>
+                <select id="eventStatus" name="eventStatus" class="form-control" required>
+                    <option value="">Select Status</option>
+                    <option value="upcoming">Upcoming</option>
+                    <option value="ongoing">Ongoing</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create</button>
+        </form>
+    </div>
+</section>
+
+
+    <!-- Footer Section -->
+    <section id="footer">
+        <img src="images/party.jpg" class="footer-img" alt="Footer Background Image">
+        <div class="title-text">
+            <p>Contact</p>
+            <h1>Follow us on social media and we won't disappoint!</h1>
+        </div>
+        <div class="footer-row">
+            <div class="footer-left">
+                <h1>Opening Hours</h1>
+                <p><i class="fa fa-clock"></i> Monday to Friday - 9am to 9pm</p>
+                <p><i class="fa fa-clock"></i> Saturday to Sunday - 8am to 11pm</p>
+            </div>
+            <div class="footer-right">
+                <h1>Get In Touch</h1>
+                <p>abc Verdun, xyz City Beirut <i class="fa fa-map-marker"></i></p>
+                <p>example@website.com <i class="fa fa-paper-plane"></i></p>
+                <p>+961 81 790 228 <i class="fa fa-phone"></i></p>
+            </div>
+        </div>
+        <div class="social-links">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+        </div>
+    </section>
+
+    <script>
+        var menuBtn = document.getElementById("menuBtn");
+        var sideNav = document.getElementById("sideNav");
+        var menu = document.getElementById("menu");
+
+        sideNav.style.right = "-250px"; 
+
+        menuBtn.onclick = function() {
+            if (sideNav.style.right === "-250px") {
+                sideNav.style.right = "0";
+                menu.src = "images/close.png";
+            } else {
+                sideNav.style.right = "-250px";
+                menu.src = "images/menu22.png";
+            }
+        };
+
+        var scroll = new SmoothScroll('a[href*="#"]', {
+            speed: 500,
+            speedAsDuration: true
+        });
+
+        $(document).ready(function() {
+            $('.select2').select2();
+        });
+    </script>
+</body>
+</html>
+

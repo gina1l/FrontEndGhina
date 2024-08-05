@@ -1,0 +1,494 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Banner Section */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(102, 100, 100, 0.5), #4d0975ce), url('images/activity.avif');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.logo {
+    width: 140px;
+    position: absolute;
+    top: 4%;
+    left: 10%;
+}
+
+.banner-text {
+    text-align: center;
+    position: relative;
+    top: 40%;
+}
+
+.banner-text h1 {
+    font-size: 130px;
+    margin-bottom: 20px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.banner-text p {
+    font-size: 20px;
+    font-style: italic;
+}
+
+.banner-btn {
+    margin: 70px auto 0;
+    text-align: center;
+}
+
+.banner-btn a {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #fff;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.banner-btn a:hover {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+}
+
+/* Side Navigation */
+#sideNav {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    right: -250px; /* Initially hidden */
+    top: 0;
+    background: hsla(283, 97%, 15%, 0.24);
+    z-index: 2;
+    transition: right 0.3s ease; 
+    padding-top: 20px; 
+}
+
+#sideNav nav ul {
+    padding: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 20px 0; /* Adjust margin for spacing */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px; /* Larger text size for visibility */
+    display: block; /* Ensure the links take up full width */
+    padding: 10px; /* Add padding for clickable area */
+}
+
+/* Menu Button */
+#menuBtn {
+    width: 80px;
+    height: 80px;
+    background: #ec52b900;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+#menuBtn img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+/* Login Section */
+/* Login Section */
+#login {
+    position: relative; /* Required for the pseudo-element positioning */
+    width: 100%;
+    padding: 70px 0;
+    background: url(images/grrade.png) no-repeat center center; /* Ensure the image covers the section */
+    background-size: cover; /* Ensure the image covers the entire section */
+}
+
+#login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(153, 79, 168, 0.699); /* Purple overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.title-text {
+    text-align: center;
+    padding-bottom: 70px;
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2; /* Ensure the title is above the overlay */
+}
+
+.title-text p {
+    margin: auto;
+    font-size: 20px;
+    color: #470068d0;
+    font-weight: bold;
+    position: relative;
+    z-index: 2; /* Ensure the text is above the overlay */
+    display: inline-block;
+}
+
+.title-text p::after {
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#3c0461, #ffffffc7);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: 1; /* Ensure the design is below the text */
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.login-box {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative; /* Required to place content above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+}
+
+.login {
+    flex-basis: 50%;
+    padding: 20px;
+    text-align: left;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #4d0975ce;
+    color: rgba(101, 4, 146, 0.39);
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #3c0461;
+}
+
+/* Event Section */
+#event {
+    position: relative; /* Required for the pseudo-element positioning */
+    width: 100%;
+    padding: 70px 0;
+    background: url('images/star.jpg') no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire section */
+    color: #fff; /* Set the text color to white for contrast */
+}
+
+#event::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(88, 12, 88, 0.479); /* Purple overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.event-box {
+    position: relative; /* Required to place content above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+/* Remove the leaf-like shape by commenting out or deleting the following */
+.event-box::before {
+    /* content: ''; */
+    /* position: absolute; */
+    /* width: 50px; */
+    /* height: 35px; */
+    /* background: linear-gradient(#3c0461, #ffffffc7); */
+    /* top: -40px; */
+    /* left: 50%; */
+    /* transform: translateX(-50%) rotate(10deg); */
+    /* border-top-left-radius: 35px; */
+    /* border-bottom-right-radius: 35px; */
+    /* z-index: 3; */
+}
+
+.event-btn {
+    text-align: center; /* Center align the button within its container */
+}
+
+.event-btn .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    color: #510668;
+    border: 2px solid #fff;
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.event-btn .btn-primary:hover {
+    color: #fff;
+    background-color: #5f048a3f; /* Light purple */
+    border-color: #5d04802c; /* Light purple */
+}
+/* Event Details Section */
+/* Event Details Section */
+#eventDetails {
+    position: relative; /* Required for the pseudo-element positioning */
+    width: 100%;
+    padding: 70px 0;
+    background: url(images/star.jpg) no-repeat center center;
+    background-size: cover; /* Ensure the image covers the entire section */
+    color: #fff; /* Set the text color to white for contrast */
+}
+
+#eventDetails::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 2, 53, 0.61); /* White overlay with 50% opacity */
+    z-index: 1; /* Ensure the overlay is above the background image */
+}
+
+.event-details-box {
+    position: relative; /* Required to place content above the overlay */
+    z-index: 2; /* Ensure content is above the overlay */
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.event-details-box::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#3c0461, #ffffffc7);
+    top: -40px; /* Adjust based on the desired position */
+    left: 50%;
+    transform: translateX(-50%) rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    z-index: 2; /* Ensure the leaf shape is above the overlay */
+}
+
+.event-details-box h1 {
+    margin-bottom: 20px;
+}
+
+.event-details-box form {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #430b6659; /* Light purple background for form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required to place content above the pseudo-element */
+}
+
+.event-details-box .form-group {
+    margin-bottom: 20px;
+}
+
+.event-details-box .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.event-details-box .form-group input, 
+.event-details-box .form-group select, 
+.event-details-box .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.event-details-box .form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    height: 100px;
+}
+
+.event-details-box .btn-primary {
+    background-color: #4d0975ce;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.event-details-box .btn-primary:hover {
+    background-color: #3c0461;
+}
+
+
+
+/* Footer Section */
+#footer {
+    padding: 100px 0 20px;
+    background: rgba(125, 15, 158, 0.267);
+    position: relative;
+}
+
+.footer-row {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-left, .footer-right {
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer-right {
+    text-align: right;
+}
+
+.footer-row h1 {
+    margin: 10px 0;
+}
+
+.footer-row p {
+    line-height: 35px;
+}
+
+.footer-left .fa, .footer-right .fa {
+    font-size: 20px;
+    color: hsla(283, 90%, 23%, 0.925);
+    margin: 10px;
+}
+
+.footer-img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.social-links {
+    text-align: center;
+}
+
+.social-links .fa {
+    height: 70px;
+    width: 70px;
+    font-size: 20px;
+    line-height: 40px;
+    border: 1px solid #3c0253;
+    margin: 40px 5px 0;
+    color: #3c0253;
+    cursor: pointer;
+}
+
+.social-links i {
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.social-links i:hover {
+    color: #500a4934; /* Hover color */
+    border-color: #d8a8d3; /* Hover border color */
+}
+
+@media screen and (max-width: 770px) {
+    .login-box, .registration-box, .event-box {
+        flex-direction: column;
+    }
+
+    .login-img img, .footer-img {
+        width: 100%;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-left, .footer-right {
+        flex-basis: 100%;
+        text-align: center;
+    }
+}
